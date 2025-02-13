@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+     </div>
+
+    <div class="birthdayCard">
+      <div class="cardFront">
+        <h3 class="happy">FOR MY SHRUBBYYY<h3>
+        <div class="balloons">
+          <div class="balloon-1"></div>
+          <div class="balloon-2"></div>
+          <div class="balloon-3"></div>
+          <div class="balloon-4"></div>
+        </div>
+      </div>
+      <div class="cardInside">
+        <h3 class="back">HAPPY VALENTINE'S</h3>
+        <p>Dear Shrubby,<br><br>
+          This is our 2nd Valentine's together, and I just want to tell you nga I'm very very grateful to have you as my shrubbyy. 
+          Even though permi ikaw nasisina sa ako, ikaw ra gihapon and will always be myy Shrubbyy. I loveee youuu kadurooo Miss Gelaaa!
+        </p>
+      </div>
+    </div>
+
+    <audio id="myAudio" hidden>
+        <source src="Mundo.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const audio = document.getElementById("myAudio");
+        
+            audio.addEventListener("loadedmetadata", function () {
+                audio.currentTime = 5; // Start at 6 seconds
+                audio.play().catch(error => console.log("Autoplay blocked:", error));
+            });
+        });
+    </script>
+    
+    
+  </body>
+</html>

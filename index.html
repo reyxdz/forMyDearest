@@ -61,10 +61,10 @@
         document.addEventListener("DOMContentLoaded", function () {
             const audio = document.getElementById("myAudio");
         
-            audio.addEventListener("loadedmetadata", function () {
-                audio.currentTime = 5; // Start at 6 seconds
-                audio.play().catch(error => console.log("Autoplay blocked:", error));
-            });
+            audio.muted = true; // Mute initially
+            audio.play().then(() => {
+                audio.muted = false; // Unmute after playback starts
+            }).catch(error => console.log("Autoplay blocked:", error));
         });
     </script>
     
